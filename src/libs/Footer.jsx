@@ -9,10 +9,11 @@ import {
 import { GrLanguage } from "react-icons/gr";
 import { TbArrowUpRight } from "react-icons/tb";
 import andriodImg from "./../assets/img/heroFooter.png";
+import { BiPlus } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <div className="bg-[#f0f3f4] flex flex-col gap-[30px] pt-[40px] px-2 md:px-[60px] pb-0">
+    <div className="bg-[#f0f3f4] flex flex-col gap-[30px] pt-[40px] px-3 md:px-[60px] pb-0">
       <div className="container mx-auto flex flex-col gap-[40px] ">
         <div className="flex flex-col md:flex-row md:items-center gap-[40px]">
           <span className="font-[700] text-[16px]">Follow Us</span>
@@ -28,10 +29,13 @@ const Footer = () => {
         <div>
           <div className="grid lg:grid-cols-4 gap-4 mx-auto pb-10">
             <div className="flex flex-col gap-[24px]">
+             <div className="flex items-center justify-between">
               <h5 className="font-[500] text-[16px] text-[#202124]">
                 {" "}
                 Privacy & Safety{" "}
               </h5>
+              <BiPlus className="lg:hidden" />
+              </div>
               <ul className="flex flex-col gap-[20px] text-[#5F6368] text-[16px] font-[400]">
                 <li>
                   <a href="" className="footer-nav-li">

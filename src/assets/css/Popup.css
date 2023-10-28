@@ -1,4 +1,3 @@
-
 body.popup-open {
   overflow: hidden;
 }
@@ -13,6 +12,7 @@ body.popup-open {
   display: flex;
   justify-content: center;
   overflow: auto;
+  top: -100vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   align-items: center;
 }
@@ -42,7 +42,6 @@ body.popup-open {
     top: 100vh;
   }
 }
-
 
 .popup-inner {
   position: relative;
