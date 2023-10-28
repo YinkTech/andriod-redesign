@@ -1,6 +1,170 @@
 .andriod2 {
-  background: url(./../img/Rectangle5.png);
-  background-size: 100% 100% ;
+  background: url(./../img/Rectangle5.webp);
   background-position: center;
-  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+}
+
+.btn-hover {
+  --initialBgColor: #202124;
+  --slideBgColor: #fff;
+  color: #fff;
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+  isolation: isolate;
+  border-radius: 24px;
+}
+
+.btn-hover:hover {
+  border-radius: 24px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  isolation: isolate;
+  background-position: -100%;
+}
+
+.btn-hover-transparent {
+  border: 1px solid #202124;
+  border-radius: 24px;
+  padding: 12px 24px;
+  --initialBgColor: transparent;
+  --slideBgColor: #dadce0;
+  color: #000;
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+  isolation: isolate;
+  border-radius: 24px;
+}
+
+.btn-hover-transparent:hover {
+  border-radius: 24px;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  isolation: isolate;
+  background-position: -100%;
+}
+
+.btn-hover-trans-white {
+  --initialBgColor: hsla(0, 0%, 100%, 0.6);
+  --slideBgColor: #ffffff;
+  color: #202124;
+  backdrop-filter: blur(20px);
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+  isolation: isolate;
+}
+
+.btn-hover-trans-white:hover {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #000;
+  isolation: isolate;
+  background-position: -100%;
+}
+
+.btn-hover-trans {
+  --initialBgColor: transparent;
+  --slideBgColor: #ffffff;
+  color: #000;
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+  isolation: isolate;
+}
+
+.btn-hover-trans:hover {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  color: #000;
+  cursor: pointer;
+  isolation: isolate;
+  background-position: -100%;
+}
+
+.btn-hover-sec {
+  --initialBgColor: transparent;
+  --slideBgColor: #dadce0;
+  color: #000;
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+  isolation: isolate;
+}
+
+.btn-hover-sec:hover {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  color: #000;
+  cursor: pointer;
+  isolation: isolate;
+  background-position: -100%;
+}
+
+.footer-nav-li {
+  transition: 0.3s all ease-in-out;
+}
+.footer-nav-li:hover {
+  color: #000;
+}
+
+.selectCont {
+  padding: 5px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.selectfooter {
+  font-weight: 400;
+  margin: 0;
+  color: #202124;
+  padding: 0;
+  background: inherit;
+}
+
+select:focus {
+  outline: none;
 }

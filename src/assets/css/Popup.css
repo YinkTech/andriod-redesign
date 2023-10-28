@@ -1,0 +1,76 @@
+
+body.popup-open {
+  overflow: hidden;
+}
+.popup {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.274);
+  backdrop-filter: blur(30px);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.popup.active {
+  animation: slideFromBottom 0.5s forwards;
+}
+
+.popup.closing {
+  animation: slideToBottom 0.5s backwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    top: 100vh;
+  }
+  to {
+    top: 0; /* Adjust this value as needed */
+  }
+}
+
+@keyframes slideToBottom {
+  from {
+    top: 0; /* Should match the "to" value of slideFromBottom */
+  }
+  to {
+    top: 100vh;
+  }
+}
+
+
+.popup-inner {
+  position: relative;
+  width: 100%;
+  max-width: fit-content;
+  overflow: auto;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.close-btn-cont {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close-btn {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.close-btn-icon {
+  font-size: 30px;
+  transition: 0.5s all ease-in-out;
+}
+
+.close-btn-icon:hover {
+  transform: scale(1.3);
+}
