@@ -1,6 +1,27 @@
-body.popup-open {
+body.popup-open,.Navpopup-open {
   overflow: hidden;
 }
+.Navpopup {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 3;
+  overflow: auto;
+  top: -100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.Navpopup.active {
+  animation: slideFromBottom 0.5s forwards;
+}
+
+.Navpopup.closing {
+  animation: slideToBottom 0.5s backwards;
+}
+
 .popup {
   position: fixed;
   left: 0;
@@ -30,17 +51,26 @@ body.popup-open {
     top: 100vh;
   }
   to {
-    top: 0; /* Adjust this value as needed */
+    top: 0;
   }
 }
 
 @keyframes slideToBottom {
   from {
-    top: 0; /* Should match the "to" value of slideFromBottom */
+    top: 0;
   }
   to {
     top: 100vh;
   }
+}
+
+.Navpopup-inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
 .popup-inner {
@@ -50,6 +80,13 @@ body.popup-open {
   overflow: auto;
   border-radius: 20px;
   background-color: #fff;
+}
+
+.Navclose-btn-cont {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .close-btn-cont {

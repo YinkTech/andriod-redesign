@@ -170,19 +170,20 @@ select:focus {
 }
 
 @media (max-width: 1024px) {
-  .content { 
+  .content {
     display: none;
     transition: opacity 5.5s, transform 0.5s;
-   }
-   .notseen {
+  }
+  .notseen {
     display: none;
-   }
-  
+  }
+
   .slide-in {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    animation: slideIn 0.5s ease-in-out;}
+    animation: slideIn 0.5s ease-in-out;
+  }
 
   @keyframes slideIn {
     0% {
@@ -195,4 +196,3 @@ select:focus {
     }
   }
 }
-

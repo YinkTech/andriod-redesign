@@ -7,6 +7,8 @@ import { TbArrowUpRight } from "react-icons/tb";
 import { BsDownload } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 
+import helpArrow from "./../assets/img/mdi_arrow-up.svg";
+
 const LoadHeading = styled.h3`
   font-weight: 700;
   font-size: 24px;
@@ -25,63 +27,72 @@ const Paragraphy = styled.p`
 export const StayConnected = (props) => {
   return (
     <div>
-    <div className=" lg:p-9 flex mx-auto flex-col justify-center items-center">
-        <div
-          className="flex md:flex-row flex-col items-center w-full h-full justify-center gap-10 "
-        > <div>
-          <div className="flex lg:w-[450px] md:w-[300px]  w-[300px] justify-center flex-col gap-2">
-            <span className="font-[500] text-[16px]">{props.preText}</span>
-            <h4 className="text-[#202124] font-[700] lg:text-[48px] text-[28px] "> {props.title} </h4>
-            <p className="text-[18px] font-[400] ">
-              {props.text}
-            </p>
-          <button
-            className="btn-hover-sec w-[285px] font-bold text-[16px] flex items-center justify-center gap-[15px] "
-            style={{
-              display: `${props.button}`,
-              padding: "5px 20px",
-              borderRadius: "24px",
-              border: '1px solid #000',
-              width: "fit-content",
-            }}
-          >
-            Download now
-            <BsDownload className="text-xl" />
-          </button>
-          <button
-            className="btn-hover-sec w-[285px] font-bold text-[16px] flex items-center justify-center gap-[15px] "
-            style={{
-              display: `${props.subButton}`,
-              padding: "5px 20px",
-              borderRadius: "24px",
-              border: '1px solid #000',
-              width: "fit-content",
-            }}
-          >
-            Shop devices
-            <BsArrowRightShort className="text-2xl" />
-          </button>
+      <div className=" lg:p-9 flex mx-auto flex-col justify-center items-center">
+        <div className="flex md:flex-row flex-col items-center w-full h-full justify-center gap-10 ">
+          {" "}
+          <div>
+            <div className="flex lg:w-[450px] md:w-[300px]  w-[300px] justify-center flex-col gap-2">
+              <span className="font-[500] text-[16px]">{props.preText}</span>
+              <h4 className="text-[#202124] font-[700] lg:text-[48px] text-[28px] ">
+                {" "}
+                {props.title}{" "}
+              </h4>
+              <p className="text-[18px] font-[400] ">{props.text}</p>
+              <button
+                className="btn-hover-sec w-[285px] font-bold text-[16px] flex items-center justify-center gap-[15px] "
+                style={{
+                  display: `${props.button}`,
+                  padding: "5px 20px",
+                  borderRadius: "24px",
+                  border: "1px solid #000",
+                  width: "fit-content",
+                }}
+              >
+                Download now
+                <BsDownload className="text-xl" />
+              </button>
+              <button
+                className="btn-hover-sec w-[285px] font-bold text-[16px] flex items-center justify-center gap-[15px] "
+                style={{
+                  display: `${props.subButton}`,
+                  padding: "5px 20px",
+                  borderRadius: "24px",
+                  border: "1px solid #000",
+                  width: "fit-content",
+                }}
+              >
+                Shop devices
+                <BsArrowRightShort className="text-2xl" />
+              </button>
+            </div>
           </div>
-        </div>
-        <div>
-          <div
-            className="flex justify-center lg:w-[450px] md:w-[300px] w-[300px] items-center"
-            style={{ background: `url(${props.subImage})`, backgroundPosition: 'center', backgroundSize: '100% 100%', borderRadius: "40px", flex: '1 1 120px', aspectRatio: '1 /1' }}
-          >
-            <video
-              style={{ borderRadius: "40px" }}
-              autoPlay
-              muted
-              loop
-              className="w-full h-full"
+          <div>
+            <div
+              className="flex justify-center lg:w-[450px] md:w-[300px] w-[300px] items-center"
+              style={{
+                background: `url(${props.subImage})`,
+                backgroundPosition: "center",
+                backgroundSize: "100% 100%",
+                borderRadius: "40px",
+                flex: "1 1 120px",
+                aspectRatio: "1 /1",
+              }}
             >
-              <source src={`${props.subImage}`} type="video/webm" />
-              Your browser does not support the video tag.
-            </video>
+              <video
+                style={{ borderRadius: "40px" }}
+                autoPlay
+                muted
+                loop
+                className="w-full h-full"
+              >
+                <source src={`${props.subImage}`} type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>
-    </div></div>
+    </div>
   );
 };
 
@@ -142,6 +153,39 @@ export const PassPhone = (props) => {
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+  );
+};
+
+export const NavMobileList = () => {
+  return (
+    <div className="h-full">
+      <div className="flex flex-col justify-around h-full">
+        <div>
+          <ul className="flex justify-end items-end flex-col gap-5  h-full">
+            <li className="flex justify-center items-center transition-all cursor-pointer hover:shadow-2xl rounded-2xl sm:text-[32px] text-[27px] text-[#202124] hover:underline font-[400] py-[17px] px-[6px] gap-3"> Discover Andriod <BsArrowRightShort /></li>
+            <li className="flex justify-center items-center transition-all cursor-pointer hover:shadow-2xl rounded-2xl sm:text-[32px] text-[27px] text-[#202124] hover:underline font-[400] py-[17px] px-[6px] gap-3"> Switch &amp; transfer <BsArrowRightShort /></li>
+            <li className="flex justify-center items-center transition-all cursor-pointer hover:shadow-2xl rounded-2xl sm:text-[32px] text-[27px] text-[#202124] hover:underline font-[400] py-[17px] px-[6px] gap-3"> Explore devices <BsArrowRightShort /></li>
+          </ul>
+        </div>
+        <div className="flex justify-center items-center">
+          <button
+            className="font-[700] btn-hover bg-[#202124] text-white flex items-center gap-[8px] text-[16px]"
+            style={{
+              border: "1px solid #202124",
+              borderRadius: "24px",
+              padding: "12px 28px",
+            }}
+          >
+            Shop phones
+            <img
+              src={helpArrow}
+              className="w-[24px] h-[24px]"
+              alt={helpArrow}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
