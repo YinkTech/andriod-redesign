@@ -168,3 +168,31 @@
 select:focus {
   outline: none;
 }
+
+@media (max-width: 1024px) {
+  .content { 
+    display: none;
+    transition: opacity 5.5s, transform 0.5s;
+   }
+   .notseen {
+    display: none;
+   }
+  
+  .slide-in {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideIn 0.5s ease-in-out;}
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
