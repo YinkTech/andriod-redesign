@@ -171,6 +171,7 @@ export const NavMobileList = () => {
         </div>
         <div className="flex justify-center items-center">
           <button
+
             className="font-[700] btn-hover bg-[#202124] text-white flex items-center gap-[8px] text-[16px]"
             style={{
               border: "1px solid #202124",

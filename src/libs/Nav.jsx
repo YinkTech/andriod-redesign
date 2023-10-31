@@ -15,7 +15,7 @@ const Nav = () => {
       className="flex py-[10px] px-[20px]  lg:py-[20px] lg:px-[60px] transition-all justify-between shadow"
       style={{ fontFamily: "ProductSans" }}
     >
-      <NavPopUp trigger={btnPop} setTrigger={setBtnPop}>
+      <NavPopUp trigger={btnPop} isCloseBtn={isOpen}  closeBtnToggle={setOpen} setTrigger={setBtnPop}>
         <NavMobileList />
       </NavPopUp>
       <div
